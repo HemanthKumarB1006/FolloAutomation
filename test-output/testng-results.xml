@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-28T09:18:58Z" name="Default suite" finished-at="2023-08-28T09:20:12Z" duration-ms="74434">
+    <groups>
+    </groups>
+    <test started-at="2023-08-28T09:18:58Z" name="Default test" finished-at="2023-08-28T09:20:12Z" duration-ms="74434">
+      <class name="tests.TestScenario1">
+        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:tests.TestScenario1@c430e6c]" started-at="2023-08-28T09:18:58Z" name="suiteSetup" finished-at="2023-08-28T09:18:58Z" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetup -->
+        <test-method is-config="true" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:tests.TestScenario1@c430e6c]" started-at="2023-08-28T09:18:58Z" name="methodSetup" finished-at="2023-08-28T09:19:13Z" duration-ms="15203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.TestScenario1.TestCase1(java.util.HashMap) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetup -->
+        <test-method signature="TestCase1(java.util.HashMap)[pri:1, instance:tests.TestScenario1@c430e6c]" started-at="2023-08-28T09:19:13Z" name="TestCase1" data-provider="TestScenario1" finished-at="2023-08-28T09:20:11Z" duration-ms="57638" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{=, TESTCASENAME=TestCase1, GATENAME=Gate, TOTIMEHH=5, EQUIPMENTNAME=Forklift, FROMTIMEHH=9, EQUIPMENTValue=3, DELIVERYDESCRIPTION=Automation Testing , PASSWORD=Test@123, CONTACTVALUE=860, DFOWNAME=DFOW, USERNAME=hein123@yopmail.com, COMPANYNAME=Company 1, COMPANYADDRESS=New}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase1 -->
+        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:tests.TestScenario1@c430e6c]" started-at="2023-08-28T09:20:11Z" name="methodTearDown" finished-at="2023-08-28T09:20:12Z" duration-ms="913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+      </class> <!-- tests.TestScenario1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

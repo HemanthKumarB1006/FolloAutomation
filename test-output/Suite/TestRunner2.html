@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>TestNG:  TestRunner2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TestRunner2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Aug 14 04:55:56 PDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>60 seconds (60443 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TestScenario2.TestCase4()'><b>TestCase4</b><br>Test class: tests.TestScenario2<br>Parameters: {Placeholder=Project Name, MaxLengthSize=2GB, Label=Left, MaxLength=50, Placeholder2=Address Line2, Placeholder1=Address Line1, Placeholder10=Market sector, Placeholder11=Project tag, PostalMax=12, Currency=India, USERNAME=deva@yopmail.com, TemplateName=Template1, TESTCASENAME=TestCase4, Placeholder6=Postal Code, Placeholder5=Country, Placeholder4=State, Placeholder3=City, PASSWORD=Test@123, DataValue2=Test2, Placeholder9=Delivery Method, DataValue1=Test1, Placeholder8=Business Unit, Placeholder7=Client, TabName=Tabel1, PhoneMax=10}</td>
+<td><div><pre>java.lang.AssertionError: Unable to Login. Unable locate employee
+	at pages.LoginPage.checkData(LoginPage.java:56)
+	at tests.TestScenario2.TestCase4(TestScenario2.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace819048749", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace819048749'><pre>java.lang.AssertionError: Unable to Login. Unable locate employee
+	at org.testng.Assert.fail(Assert.java:96)
+	at pages.LoginPage.checkData(LoginPage.java:56)
+	at tests.TestScenario2.TestCase4(TestScenario2.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+</pre></div></td>
+<td>13</td>
+<td>tests.TestScenario2@3de8f619</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TestScenario2.TestCase5()'><b>TestCase5</b><br>Test class: tests.TestScenario2<br>Parameters: {Placeholder=, MaxLengthSize=2GB, Label=Left, MaxLength=, Placeholder2=, Placeholder1=, Placeholder10=, Placeholder11=, PostalMax=12, Currency=India, USERNAME=deva@yopmail.com, TemplateName=Template1, TESTCASENAME=TestCase5, Placeholder6=, Placeholder5=, Placeholder4=, Placeholder3=, PASSWORD=Test@123, DataValue2=Test2, Placeholder9=, DataValue1=Test1, Placeholder8=, Placeholder7=, TabName=Tabel1, PhoneMax=10}</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScenario2@3de8f619</td></tr>
+<tr>
+<td title='tests.TestScenario2.TestCase6()'><b>TestCase6</b><br>Test class: tests.TestScenario2<br>Parameters: {Placeholder=, MaxLengthSize=3GB, Label=Left, MaxLength=, Placeholder2=, Placeholder1=, Placeholder10=, Placeholder11=, PostalMax=13, Currency=India, USERNAME=deva@yopmail.com, TemplateName=Template2, TESTCASENAME=TestCase6, Placeholder6=, Placeholder5=, Placeholder4=, Placeholder3=, PASSWORD=Test@123, DataValue2=Test3, Placeholder9=, DataValue1=Test2, Placeholder8=, Placeholder7=, TabName=Tabel1, PhoneMax=11}</td>
+<td></td>
+<td>0</td>
+<td>tests.TestScenario2@3de8f619</td></tr>
+</table><p>
+</body>
+</html>
