@@ -1,39 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-28T09:18:58Z" name="Default suite" finished-at="2023-08-28T09:20:12Z" duration-ms="74434">
+  <suite started-at="2023-11-08T08:12:56Z" name="Default suite" finished-at="2023-11-08T08:13:40Z" duration-ms="43772">
     <groups>
     </groups>
-    <test started-at="2023-08-28T09:18:58Z" name="Default test" finished-at="2023-08-28T09:20:12Z" duration-ms="74434">
+    <test started-at="2023-11-08T08:12:56Z" name="Default test" finished-at="2023-11-08T08:13:40Z" duration-ms="43772">
       <class name="tests.TestScenario1">
-        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:tests.TestScenario1@c430e6c]" started-at="2023-08-28T09:18:58Z" name="suiteSetup" finished-at="2023-08-28T09:18:58Z" duration-ms="40" status="PASS">
+        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:tests.TestScenario1@312aa7c]" started-at="2023-11-08T08:12:56Z" name="suiteSetup" finished-at="2023-11-08T08:12:56Z" duration-ms="53" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method is-config="true" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:tests.TestScenario1@c430e6c]" started-at="2023-08-28T09:18:58Z" name="methodSetup" finished-at="2023-08-28T09:19:13Z" duration-ms="15203" status="PASS">
+        <test-method is-config="true" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:tests.TestScenario1@312aa7c]" started-at="2023-11-08T08:12:57Z" name="methodSetup" finished-at="2023-11-08T08:13:04Z" duration-ms="7396" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.TestScenario1.TestCase1(java.util.HashMap) throws java.lang.Exception]]>
+                <![CDATA[public void tests.TestScenario1.TestCase3(java.util.HashMap)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetup -->
-        <test-method signature="TestCase1(java.util.HashMap)[pri:1, instance:tests.TestScenario1@c430e6c]" started-at="2023-08-28T09:19:13Z" name="TestCase1" data-provider="TestScenario1" finished-at="2023-08-28T09:20:11Z" duration-ms="57638" status="PASS">
+        <test-method signature="TestCase3(java.util.HashMap)[pri:2, instance:tests.TestScenario1@312aa7c]" started-at="2023-11-08T08:13:04Z" name="TestCase3" data-provider="TestScenario1" finished-at="2023-11-08T08:13:38Z" duration-ms="34286" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{=, TESTCASENAME=TestCase1, GATENAME=Gate, TOTIMEHH=5, EQUIPMENTNAME=Forklift, FROMTIMEHH=9, EQUIPMENTValue=3, DELIVERYDESCRIPTION=Automation Testing , PASSWORD=Test@123, CONTACTVALUE=860, DFOWNAME=DFOW, USERNAME=hein123@yopmail.com, COMPANYNAME=Company 1, COMPANYADDRESS=New}]]>
+                <![CDATA[{=, TESTCASENAME=TestCase3, GATENAME=, TOTIMEHH=, EQUIPMENTNAME=, FROMTIMEHH=, EQUIPMENTValue=, DELIVERYDESCRIPTION=, PASSWORD=Test@123, CONTACTVALUE=, DFOWNAME=, USERNAME=hemanthpa123@yopmail.com, COMPANYNAME=, COMPANYADDRESS=}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unable to click: By.xpath: //span[text()='Choose Location']]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unable to click: By.xpath: //span[text()='Choose Location']
+at org.testng.Assert.fail(Assert.java:96)
+at pages.DeliveryBookingPage.deliveryBooking(DeliveryBookingPage.java:67)
+at tests.TestScenario1.TestCase3(TestScenario1.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase1 -->
-        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:tests.TestScenario1@c430e6c]" started-at="2023-08-28T09:20:11Z" name="methodTearDown" finished-at="2023-08-28T09:20:12Z" duration-ms="913" status="PASS">
+        </test-method> <!-- TestCase3 -->
+        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:tests.TestScenario1@312aa7c]" started-at="2023-11-08T08:13:38Z" name="methodTearDown" finished-at="2023-11-08T08:13:40Z" duration-ms="1198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodTearDown -->

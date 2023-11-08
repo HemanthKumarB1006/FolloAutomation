@@ -30,14 +30,14 @@ public class SettingsPage extends MasterPage implements SettingsPageElemnet {
 			clickElement(buttonYes);
 			clickElement(clickNewCompany);
 			String random1 = companyData.get("COMPANYNAME");
-			String Dummy1 = RandomStringUtils.randomNumeric(3);
+			String Dummy1 = RandomStringUtils.randomNumeric(4);
 			String randomName = random1 + Dummy1;
 			enterData(enterCompanyName, randomName);
 			enterData(enterAddressLine1, companyData.get("COMPANYADDRESS"));
 			waitUntil(4000);
 			downArrowKeyPressMCQ();
 			waitUntil(4000);
-			clickElement(clickCompanySubmit);
+//			clickElement(clickCompanySubmit);
 
 			waitUntil(4000);
 			if (checkCondition(buttonYes, ElementCheckStrategy.DISPLAYED)) {
@@ -117,11 +117,10 @@ public class SettingsPage extends MasterPage implements SettingsPageElemnet {
 			clickElement(selectEquipmentType);
 			selectOption(selectEquipmentType, SelectStrategy.VALUE, equipmentData.get("EQUIPMENTValue"));
 			ClickEnter();
-//3
 			clickElement(selectContactPerson);
 			selectOption(selectContactPerson, SelectStrategy.VALUE, equipmentData.get("CONTACTVALUE"));
 			ClickEnter();
-//			 856
+
 			clickElement(clickEquipmentCancelButton);
 			clickElement(buttonEquipmentNo);
 			clickElement(clickEquipmentCancelButton);

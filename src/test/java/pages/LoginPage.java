@@ -24,6 +24,7 @@ public class LoginPage extends MasterPage implements LoginPageElements {
 //                throw new Exception("Unable to Login");
 //            }
 			ExtentLogger.pass("Login Success");
+			waitUntil(7000);
 		} catch (Exception e) {
 			Assert.fail("Unable to Login. " + e.getMessage());
 		}
@@ -43,28 +44,21 @@ public class LoginPage extends MasterPage implements LoginPageElements {
 				System.out.println("true value ");
 			}
 			waitUntil(7000);
-			clickElement(companyDropDown);
-			clickElement(selectCompany);
-			waitUntil(4000);
+//			clickElement(companyDropDown);
+//			clickElement(selectCompany);
+//			waitUntil(4000);
 //			if (checkCondition(clickCancel, ElementCheckStrategy.DISPLAYED)) {
 //				clickElement(clickCancel);
 //			} else {
 //				clickElement(projectDropdown);
 //			}
-			clickElement(projectDropdown);
-			clickElement(selectProject);
-			waitUntil(4000);
+//			clickElement(projectDropdown);
+//			clickElement(selectProject);
+//			waitUntil(4000);
 
 			ExtentLogger.pass("true 11 Success");
-//	DriverManager.getDriver().findElement(iconSettings).click();
-//	ExtentLogger.print("Setting clicked ");
 		} catch (Exception e) {
-			clickElement(clickCancel);
-			waitUntil(4000);
-			clickElement(projectDropdown);
-			clickElement(selectProject);
-			waitUntil(4000);
-			
+		
 			Assert.fail("Unable to Login. " + e.getMessage());
 		}
 		return this;

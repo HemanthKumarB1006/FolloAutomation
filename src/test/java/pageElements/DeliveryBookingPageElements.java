@@ -24,6 +24,7 @@ public interface DeliveryBookingPageElements {
 	By buttonModelClose = By.xpath("//img[@alt='Modal Close']");
 	By searchDeliveryBookings = By.xpath("//input[@placeholder='What are you looking for?']");
 	By buttonVoidList = By.xpath("//button[text()=' Void List ']");
+	By locationDropdownArrow = By.xpath("(//span[@class='dropdown-multiselect__caret'])[4]");
 	By chooseLocation = By.xpath("//span[text()='Choose Location']");
 	By searchLocation = By.xpath("(//input[@placeholder=\"Search\"])[3]");
 	
