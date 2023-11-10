@@ -1,32 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-08T08:12:56Z" name="Default suite" finished-at="2023-11-08T08:13:40Z" duration-ms="43772">
+  <suite started-at="2023-11-10T07:14:30Z" name="Suite" finished-at="2023-11-10T07:17:39Z" duration-ms="188832">
     <groups>
     </groups>
-    <test started-at="2023-11-08T08:12:56Z" name="Default test" finished-at="2023-11-08T08:13:40Z" duration-ms="43772">
+    <test started-at="2023-11-10T07:14:30Z" name="TestRunner1" finished-at="2023-11-10T07:17:39Z" duration-ms="188832">
       <class name="tests.TestScenario1">
-        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:tests.TestScenario1@312aa7c]" started-at="2023-11-08T08:12:56Z" name="suiteSetup" finished-at="2023-11-08T08:12:56Z" duration-ms="53" status="PASS">
+        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:tests.TestScenario1@4c163e3]" started-at="2023-11-10T07:14:30Z" name="suiteSetup" finished-at="2023-11-10T07:14:30Z" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method is-config="true" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:tests.TestScenario1@312aa7c]" started-at="2023-11-08T08:12:57Z" name="methodSetup" finished-at="2023-11-08T08:13:04Z" duration-ms="7396" status="PASS">
+        <test-method is-config="true" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:tests.TestScenario1@4c163e3]" started-at="2023-11-10T07:14:30Z" name="methodSetup" finished-at="2023-11-10T07:14:48Z" duration-ms="17520" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.TestScenario1.TestCase3(java.util.HashMap)]]>
+                <![CDATA[public void tests.TestScenario1.TestCase1(java.util.HashMap) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetup -->
-        <test-method signature="TestCase3(java.util.HashMap)[pri:2, instance:tests.TestScenario1@312aa7c]" started-at="2023-11-08T08:13:04Z" name="TestCase3" data-provider="TestScenario1" finished-at="2023-11-08T08:13:38Z" duration-ms="34286" status="FAIL">
+        <test-method signature="TestCase1(java.util.HashMap)[pri:1, instance:tests.TestScenario1@4c163e3]" started-at="2023-11-10T07:14:48Z" name="TestCase1" data-provider="TestScenario1" finished-at="2023-11-10T07:16:50Z" duration-ms="122323" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{=, TESTCASENAME=TestCase3, GATENAME=, TOTIMEHH=, EQUIPMENTNAME=, FROMTIMEHH=, EQUIPMENTValue=, DELIVERYDESCRIPTION=, PASSWORD=Test@123, CONTACTVALUE=, DFOWNAME=, USERNAME=hemanthpa123@yopmail.com, COMPANYNAME=, COMPANYADDRESS=}]]>
+                <![CDATA[{=, TESTCASENAME=TestCase1, GATENAME=Gate, TOTIMEHH=5, EQUIPMENTNAME=Forklift, FROMTIMEHH=9, EQUIPMENTValue=3, DELIVERYDESCRIPTION=Automation Testing , PASSWORD=Test@123, CONTACTVALUE=996, DFOWNAME=DFOW, USERNAME=hemanthpa123@yopmail.com, COMPANYNAME=Company 1, COMPANYADDRESS=New}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase1 -->
+        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:tests.TestScenario1@4c163e3]" started-at="2023-11-10T07:16:50Z" name="methodTearDown" finished-at="2023-11-10T07:16:51Z" duration-ms="1178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:tests.TestScenario1@4c163e3]" started-at="2023-11-10T07:16:51Z" name="methodSetup" finished-at="2023-11-10T07:17:03Z" duration-ms="11923" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.TestScenario1.TestCase2(java.util.HashMap)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetup -->
+        <test-method signature="TestCase2(java.util.HashMap)[pri:2, instance:tests.TestScenario1@4c163e3]" started-at="2023-11-10T07:17:03Z" name="TestCase2" data-provider="TestScenario1" finished-at="2023-11-10T07:17:37Z" duration-ms="33758" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{=, TESTCASENAME=TestCase2, GATENAME=, TOTIMEHH=, EQUIPMENTNAME=, FROMTIMEHH=, EQUIPMENTValue=, DELIVERYDESCRIPTION=, PASSWORD=Test@123, CONTACTVALUE=, DFOWNAME=, USERNAME=hemanthpa123@yopmail.com, COMPANYNAME=, COMPANYADDRESS=}]]>
               </value>
             </param>
           </params>
@@ -38,7 +64,7 @@
               <![CDATA[java.lang.AssertionError: Unable to click: By.xpath: //span[text()='Choose Location']
 at org.testng.Assert.fail(Assert.java:96)
 at pages.DeliveryBookingPage.deliveryBooking(DeliveryBookingPage.java:67)
-at tests.TestScenario1.TestCase3(TestScenario1.java:34)
+at tests.TestScenario1.TestCase2(TestScenario1.java:34)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -50,29 +76,24 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1623)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase3 -->
-        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:tests.TestScenario1@312aa7c]" started-at="2023-11-08T08:13:38Z" name="methodTearDown" finished-at="2023-11-08T08:13:40Z" duration-ms="1198" status="PASS">
+        </test-method> <!-- TestCase2 -->
+        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:tests.TestScenario1@4c163e3]" started-at="2023-11-10T07:17:37Z" name="methodTearDown" finished-at="2023-11-10T07:17:39Z" duration-ms="1183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodTearDown -->
       </class> <!-- tests.TestScenario1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- TestRunner1 -->
+  </suite> <!-- Suite -->
 </testng-results>

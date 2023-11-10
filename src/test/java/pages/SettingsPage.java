@@ -37,7 +37,7 @@ public class SettingsPage extends MasterPage implements SettingsPageElemnet {
 			waitUntil(4000);
 			downArrowKeyPressMCQ();
 			waitUntil(4000);
-//			clickElement(clickCompanySubmit);
+			clickElement(clickCompanySubmit);
 
 			waitUntil(4000);
 			if (checkCondition(buttonYes, ElementCheckStrategy.DISPLAYED)) {
@@ -57,7 +57,7 @@ public class SettingsPage extends MasterPage implements SettingsPageElemnet {
 			System.out.println("User can be able to Filter Company Name successfully");
 
 			String runTimeProperty = RuntimePropertyFileUtils.getRunTimeProperty("SearchCompany");
-			String getCompaniesName = DriverManager.getDriver().findElement(By.xpath("(//div[@class=\"my-auto\"])[2]"))
+			String getCompaniesName = DriverManager.getDriver().findElement(By.xpath("(//div[@class='my-auto'])[2]"))
 					.getText().trim();
 			System.out.println(getCompaniesName);
 			Assert.assertEquals(runTimeProperty, getCompaniesName);

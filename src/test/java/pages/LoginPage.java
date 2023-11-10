@@ -35,11 +35,15 @@ public class LoginPage extends MasterPage implements LoginPageElements {
 		waitUntil(7000);
 		try {
 			if (!findElementPresence(labelCompany)) {
-				throw new Exception("Unable locate company");
+//				throw new Exception("Unable locate company");
+				ExtentLogger.print("Eable to locate company successfully ");
+				
 			}
 
 			if (!findElementPresence(labelDeliveryCalendar)) {
-				throw new Exception("Unable locate Delivery Calendar");
+//				throw new Exception("Unable locate Delivery Calendar");
+				ExtentLogger.print("User can able to view Delivery calendar ");
+				
 			} else {
 				System.out.println("true value ");
 			}

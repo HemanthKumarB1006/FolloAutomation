@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.TestScenario1">
         <methods>
-          <include name="TestCase3" invocation-numbers="0"/>
+          <include name="TestCase2" invocation-numbers="0"/>
           <include name="suiteSetup"/>
           <include name="methodTearDown"/>
           <include name="methodSetup"/>

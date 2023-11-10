@@ -28,7 +28,7 @@ public class TestScenario1 extends MasterWrapper {
 //  
 	
 	@Test(dataProvider = "TestScenario1", dataProviderClass = DataProviderUtils.class,priority = 2)
-	public void TestCase3(HashMap<String, String> testData) {
+	public void TestCase2(HashMap<String, String> testData) {
 		loginPage.userLogin(testData)
 		.navigateToDelieryBookingPage()
 		.deliveryBooking(testData)
