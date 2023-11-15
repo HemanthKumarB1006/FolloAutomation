@@ -50,9 +50,10 @@ public class MasterPage extends MasterWrapper implements MasterPageElements {
 
 	public DeliveryBookingPage navigateToDelieryBookingPage() {
 		try {
-			waitUntil(7000);
+			waitUntil(8000);
 			clickElement(By.xpath(DynamicXpathUtils.getXpathForEnum(linkPageMenu, MasterMenuList.All)));
 			clickElement(By.xpath(DynamicXpathUtils.getXpathForString(linkPageMenu, "Delivery Bookings")));
+			waitUntil(7000);
 			ExtentLogger.pass("Navigated to Delivery Booking page ");
 		} catch (Exception e) {
 			Assert.fail("Unable to navigate Delivery Bookings page" + e.getMessage());

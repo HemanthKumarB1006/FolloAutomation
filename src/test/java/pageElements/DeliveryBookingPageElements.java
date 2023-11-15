@@ -21,15 +21,16 @@ public interface DeliveryBookingPageElements {
 	By enterFromTimeMM = By.xpath("(//input[@placeholder='MM'])[1]");
 	By enterToTimeHH = By.xpath("(//input[@placeholder='HH'])[2]");
 	By enterToTimeMM = By.xpath("(//input[@placeholder='MM'])[2]");
+	By selectPmButton = By.xpath("//label[text()='To Time:']//following::button[@class='btn btn-default text-center']");
 	By buttonModelClose = By.xpath("//img[@alt='Modal Close']");
 	By searchDeliveryBookings = By.xpath("//input[@placeholder='What are you looking for?']");
 	By buttonVoidList = By.xpath("//button[text()=' Void List ']");
 	By getDefaultLocationName = By.xpath("(//span[@class='selected-item ng-star-inserted'])[2]");
 	By locationDropdownArrow = By.xpath("(//span[@class='dropdown-multiselect__caret'])[4]");
 	By chooseLocation = By.xpath("//span[text()='Choose Location']");
-	By searchLocation = By.xpath("(//input[@placeholder=\"Search\"])[3]");
-	
-	
+	By searchLocation = By.xpath("(//input[@placeholder='Search'])[4]");
+	By selectLocation = By.xpath("//label[text()='Location']//following ::li[@class='multiselect-item-checkbox ng-star-inserted'][1]");
+	By getDeliveryData = By.xpath("(//span[@class='c-pointer'])[2]");
 //	Filter
 	By clickFilterIcon = By.xpath("//div[@class='filter-icon']");
 	By enterFilterDescription = By.xpath("//input[@placeholder='Desciription']");

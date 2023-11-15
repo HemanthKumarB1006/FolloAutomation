@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -13,22 +14,23 @@ import drivers.DriverManager;
 import frameworkEnums.SelectStrategy;
 import master.MasterPage;
 import pageElements.DeliveryBookingPageElements;
+import reports.ExtentLogger;
+import utilities.RuntimePropertyFileUtils;
 
 public class DeliveryBookingPage extends MasterPage implements DeliveryBookingPageElements {
 
 	public DeliveryBookingPage deliveryBooking(HashMap<String, String> addnewDelivery) {
 
 		try {
-			waitUntil(4000);
-//			clickElement(clickALLBookings);
-//			clickElement(clickDeliveryBookings);
 			clickElement(clickCreateNewDeliveryBookings);
+			waitUntil(4000);
 			clickElement(buttonCancelDelivery);
 			clickElement(clickCreateNewDeliveryBookings);
-			enterData(enterDeliveryDescription, addnewDelivery.get("DELIVERYDESCRIPTION"));
-			String descriptionData = getData(enterDeliveryDescription);
-//			selectOption(selectEquipment, SelectStrategy.VALUE, addnewDelivery.get(""));
-//			selectOption(selectGate, SelectStrategy.VALUE, addnewDelivery.get(""));
+			String descriptionData = addnewDelivery.get("DELIVERYDESCRIPTION");
+			String Dummy2 = RandomStringUtils.randomNumeric(3);
+			String randomDeliveryBooking = descriptionData + Dummy2;
+			enterData(enterDeliveryDescription, randomDeliveryBooking);
+			RuntimePropertyFileUtils.appendToPropFile("SearchDelivery", randomDeliveryBooking);
 			clickElement(clickDeliveryDate);
 			Calendar calendar = Calendar.getInstance();
 			calendar.add(Calendar.DATE, 2);
@@ -48,20 +50,28 @@ public class DeliveryBookingPage extends MasterPage implements DeliveryBookingPa
 			downArrowKeyPressMCQ();
 			clickElement(selectEquipment);
 			downArrowKeyPressMCQ();
-			clickElement(chooseLocation);
-			downArrowKeyPressMCQ();
 			clickElement(enterFromTimeHH);
 			clearData(enterFromTimeHH);
 			enterData(enterFromTimeHH, addnewDelivery.get("FROMTIMEHH"));
 			clickElement(enterToTimeHH);
 			clearData(enterToTimeHH);
 			enterData(enterToTimeHH, addnewDelivery.get("TOTIMEHH"));
-			clickElement(chooseLocation);
-			downArrowKeyPressMCQ();
+			clickElement(selectPmButton);
+			clickElement(locationDropdownArrow);
+			moveToElementClick(selectLocation);
+			clickElement(locationDropdownArrow);
+			moveToElementClick(selectLocation);
 			clickElement(buttonSubmitDelivery);
+			
 			waitUntil(6000);
-			moveToElementEnterData(searchDeliveryBookings, descriptionData);
-			enterData(searchDeliveryBookings, descriptionData);			
+			String runTimePropertyForDelivery = RuntimePropertyFileUtils.getRunTimeProperty("SearchDelivery");
+			waitUntil(8000);
+			moveToElementEnterData(searchDeliveryBookings, runTimePropertyForDelivery);
+			enterData(searchDeliveryBookings, runTimePropertyForDelivery);	
+			 String getDeliveryBookingData = getData(getDeliveryData);
+			 System.out.println("Delivery Bookings created Successfully" +getDeliveryBookingData);
+			 Assert.assertEquals(runTimePropertyForDelivery, getDeliveryBookingData);
+			 ExtentLogger.pass("Delivery Bookings created Successfully");
 
 		} catch (Exception e) {
 			Assert.fail(e.getMessage());
