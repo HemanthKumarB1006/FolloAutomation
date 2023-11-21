@@ -1,69 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-15T08:03:41Z" name="Suite" finished-at="2023-11-15T08:07:09Z" duration-ms="207725">
+  <suite started-at="2023-11-21T10:30:29Z" name="Default suite" finished-at="2023-11-21T10:32:25Z" duration-ms="116275">
     <groups>
     </groups>
-    <test started-at="2023-11-15T08:03:41Z" name="TestRunner1" finished-at="2023-11-15T08:07:09Z" duration-ms="207725">
-      <class name="tests.TestScenario1">
-        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:tests.TestScenario1@52f27fbd]" started-at="2023-11-15T08:03:41Z" name="suiteSetup" finished-at="2023-11-15T08:03:41Z" duration-ms="41" status="PASS">
+    <test started-at="2023-11-21T10:30:29Z" name="Default test" finished-at="2023-11-21T10:32:25Z" duration-ms="116275">
+      <class name="tests.TestScenario2">
+        <test-method is-config="true" signature="suiteSetup()[pri:0, instance:tests.TestScenario2@312aa7c]" started-at="2023-11-21T10:30:29Z" name="suiteSetup" finished-at="2023-11-21T10:30:29Z" duration-ms="55" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method is-config="true" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:tests.TestScenario1@52f27fbd]" started-at="2023-11-15T08:03:42Z" name="methodSetup" finished-at="2023-11-15T08:03:49Z" duration-ms="7109" status="PASS">
+        <test-method is-config="true" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:tests.TestScenario2@312aa7c]" started-at="2023-11-21T10:30:29Z" name="methodSetup" finished-at="2023-11-21T10:30:58Z" duration-ms="28627" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void tests.TestScenario1.TestCase1(java.util.HashMap) throws java.lang.Exception]]>
+                <![CDATA[public void tests.TestScenario2.TestCase4(java.util.HashMap) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetup -->
-        <test-method signature="TestCase1(java.util.HashMap)[pri:1, instance:tests.TestScenario1@52f27fbd]" started-at="2023-11-15T08:03:49Z" name="TestCase1" data-provider="TestScenario1" finished-at="2023-11-15T08:05:56Z" duration-ms="126427" status="PASS">
+        <test-method signature="TestCase4(java.util.HashMap)[pri:0, instance:tests.TestScenario2@312aa7c]" started-at="2023-11-21T10:30:58Z" name="TestCase4" data-provider="TestScenario2" finished-at="2023-11-21T10:32:24Z" duration-ms="85790" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{=, TESTCASENAME=TestCase1, GATENAME=Gate, TOTIMEHH=5, EQUIPMENTNAME=Forklift, FROMTIMEHH=9, EQUIPMENTValue=3, DELIVERYDESCRIPTION=Delivery Automation Testing, PASSWORD=Test@123, CONTACTVALUE=996, DFOWNAME=DFOW, USERNAME=hemanthpa123@yopmail.com, COMPANYNAME=Company 1, COMPANYADDRESS=New}]]>
+                <![CDATA[{=, CRANEEQUIPMENTNAME=Mobile Crane , PICKINGTO=Gate 2, TESTCASENAME=TestCase4, GATENAME=Gate, TOTIMEHH=5, EQUIPMENTNAME=Forklift, FROMTIMEHH=9, EQUIPMENTValue=3, DELIVERYDESCRIPTION=Delivery Automation Testing, PASSWORD=Test@123, CONTACTVALUE=996, DFOWNAME=DFOW, CRANEEQUIPMENTValue=6, USERNAME=hemanthpa123@yopmail.com, COMPANYNAME=Company 1, COMPANYADDRESS=New, PICKINGFROM=Gate 1}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase1 -->
-        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:tests.TestScenario1@52f27fbd]" started-at="2023-11-15T08:05:56Z" name="methodTearDown" finished-at="2023-11-15T08:05:57Z" duration-ms="1399" status="PASS">
+        </test-method> <!-- TestCase4 -->
+        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:tests.TestScenario2@312aa7c]" started-at="2023-11-21T10:32:24Z" name="methodTearDown" finished-at="2023-11-21T10:32:25Z" duration-ms="1199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodTearDown -->
-        <test-method is-config="true" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:tests.TestScenario1@52f27fbd]" started-at="2023-11-15T08:05:57Z" name="methodSetup" finished-at="2023-11-15T08:06:14Z" duration-ms="16729" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.TestScenario1.TestCase2(java.util.HashMap)]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodSetup -->
-        <test-method signature="TestCase2(java.util.HashMap)[pri:2, instance:tests.TestScenario1@52f27fbd]" started-at="2023-11-15T08:06:14Z" name="TestCase2" data-provider="TestScenario1" finished-at="2023-11-15T08:07:07Z" duration-ms="53077" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{=, TESTCASENAME=TestCase2, GATENAME=Null, TOTIMEHH=5, EQUIPMENTNAME=Null, FROMTIMEHH=9, EQUIPMENTValue=Null, DELIVERYDESCRIPTION=Delivery Automation Testing, PASSWORD=Test@123, CONTACTVALUE=Null, DFOWNAME=Null, USERNAME=hemanthpa123@yopmail.com, COMPANYNAME=Null, COMPANYADDRESS=Null}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase2 -->
-        <test-method is-config="true" signature="methodTearDown()[pri:0, instance:tests.TestScenario1@52f27fbd]" started-at="2023-11-15T08:07:08Z" name="methodTearDown" finished-at="2023-11-15T08:07:09Z" duration-ms="1432" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- methodTearDown -->
-      </class> <!-- tests.TestScenario1 -->
-    </test> <!-- TestRunner1 -->
-  </suite> <!-- Suite -->
+      </class> <!-- tests.TestScenario2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

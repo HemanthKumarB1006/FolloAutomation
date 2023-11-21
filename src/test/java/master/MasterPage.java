@@ -5,6 +5,7 @@ import org.testng.Assert;
 
 import applicationEnums.MasterMenuList;
 import pageElements.MasterPageElements;
+import pages.CraneBookingPage;
 import pages.DashboardPage;
 import pages.DeliveryBookingPage;
 import pages.SettingsPage;
@@ -61,5 +62,19 @@ public class MasterPage extends MasterWrapper implements MasterPageElements {
 
 		return new DeliveryBookingPage();
 
+	}
+	public CraneBookingPage navigateToCraneBookingPage() {
+try {
+	waitUntil(4000);
+	clickElement(By.xpath(DynamicXpathUtils.getXpathForEnum(linkPageMenu, MasterMenuList.Settings)));
+	waitUntil(4000);
+	scrollDown();
+	clickElement(By.xpath(DynamicXpathUtils.getXpathForEnum(linkPageMenu, MasterMenuList.Equipment)));
+	ExtentLogger.pass("Navigated to Setting page for creating crane equipment ");
+
+
+} catch (Exception e) {
+}
+return new CraneBookingPage();
 	}
 }

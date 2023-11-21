@@ -62,7 +62,6 @@ public class DeliveryBookingPage extends MasterPage implements DeliveryBookingPa
 			clickElement(locationDropdownArrow);
 			moveToElementClick(selectLocation);
 			clickElement(buttonSubmitDelivery);
-			
 			waitUntil(6000);
 			String runTimePropertyForDelivery = RuntimePropertyFileUtils.getRunTimeProperty("SearchDelivery");
 			waitUntil(8000);
