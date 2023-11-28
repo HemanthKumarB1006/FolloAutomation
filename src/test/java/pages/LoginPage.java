@@ -19,10 +19,6 @@ public class LoginPage extends MasterPage implements LoginPageElements {
 			enterData(textboxPassword, loginpage.get("PASSWORD"));
 			ExtentLogger.print("Password entered successfully ");
 			clickElement(buttonLogin);
-
-//			if (!findElementPresence(textDashbord)) {
-//                throw new Exception("Unable to Login");
-//            }
 			ExtentLogger.pass("Login Success");
 			waitUntil(7000);
 		} catch (Exception e) {
@@ -35,32 +31,19 @@ public class LoginPage extends MasterPage implements LoginPageElements {
 		waitUntil(7000);
 		try {
 			if (!findElementPresence(labelCompany)) {
-//				throw new Exception("Unable locate company");
 				ExtentLogger.print("Eable to locate company successfully ");
 				
 			}
 
 			if (!findElementPresence(labelDeliveryCalendar)) {
-//				throw new Exception("Unable locate Delivery Calendar");
 				ExtentLogger.print("User can able to view Delivery calendar ");
 				
 			} else {
-				System.out.println("true value ");
+				System.out.println("Successfully Navigated to Delivery Calendar ");
 			}
 			waitUntil(7000);
-//			clickElement(companyDropDown);
-//			clickElement(selectCompany);
-//			waitUntil(4000);
-//			if (checkCondition(clickCancel, ElementCheckStrategy.DISPLAYED)) {
-//				clickElement(clickCancel);
-//			} else {
-//				clickElement(projectDropdown);
-//			}
-//			clickElement(projectDropdown);
-//			clickElement(selectProject);
-//			waitUntil(4000);
 
-			ExtentLogger.pass("true 11 Success");
+			ExtentLogger.pass("Successfully Navigated to Delivery Calendar ");
 		} catch (Exception e) {
 		
 			Assert.fail("Unable to Login. " + e.getMessage());

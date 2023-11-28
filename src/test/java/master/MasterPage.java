@@ -5,6 +5,7 @@ import org.testng.Assert;
 
 import applicationEnums.MasterMenuList;
 import pageElements.MasterPageElements;
+import pages.ConcreteBookingPage;
 import pages.CraneBookingPage;
 import pages.DashboardPage;
 import pages.DeliveryBookingPage;
@@ -63,18 +64,34 @@ public class MasterPage extends MasterWrapper implements MasterPageElements {
 		return new DeliveryBookingPage();
 
 	}
+
 	public CraneBookingPage navigateToCraneBookingPage() {
-try {
-	waitUntil(4000);
-	clickElement(By.xpath(DynamicXpathUtils.getXpathForEnum(linkPageMenu, MasterMenuList.Settings)));
-	waitUntil(4000);
-	scrollDown();
-	clickElement(By.xpath(DynamicXpathUtils.getXpathForEnum(linkPageMenu, MasterMenuList.Equipment)));
-	ExtentLogger.pass("Navigated to Setting page for creating crane equipment ");
+		try {
+			waitUntil(4000);
+			clickElement(By.xpath(DynamicXpathUtils.getXpathForEnum(linkPageMenu, MasterMenuList.Settings)));
+			waitUntil(4000);
+			scrollDown();
+			clickElement(By.xpath(DynamicXpathUtils.getXpathForEnum(linkPageMenu, MasterMenuList.Equipment)));
+			ExtentLogger.pass("Navigated to Setting page for creating crane equipment ");
 
+		} catch (Exception e) {
+			Assert.fail("Unable to navigate Crane Bookings page" + e.getMessage());
+		}
+		return new CraneBookingPage();
+	}
 
-} catch (Exception e) {
-}
-return new CraneBookingPage();
+	public ConcreteBookingPage navigateToConcreteBookinPage() {
+		try {
+			waitUntil(8000);
+			clickElement(By.xpath(DynamicXpathUtils.getXpathForEnum(linkPageMenu, MasterMenuList.All)));
+			clickElement(By.xpath(DynamicXpathUtils.getXpathForString(linkPageMenu, "Concrete Bookings")));
+			waitUntil(4000);
+			ExtentLogger.pass("Navigated to Setting page for creating crane equipment ");
+			
+
+		} catch (Exception e) {
+			Assert.fail("Unable to navigate Concrete Bookings page" + e.getMessage());
+		}
+		return new ConcreteBookingPage();
 	}
 }

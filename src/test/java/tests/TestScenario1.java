@@ -11,7 +11,7 @@ public class TestScenario1 extends MasterWrapper {
 	
 //
 	
-	@Test(dataProvider = "TestScenario1", dataProviderClass = DataProviderUtils.class,priority = 1)
+	@Test(dataProvider = "TestScenario1", dataProviderClass = DataProviderUtils.class,priority = 0)
 	public void TestCase1(HashMap<String, String> testData) throws Exception {
 		loginPage.userLogin(testData)
 		.checkData()
@@ -27,7 +27,7 @@ public class TestScenario1 extends MasterWrapper {
 
 //  
 	
-	@Test(dataProvider = "TestScenario1", dataProviderClass = DataProviderUtils.class,priority = 2)
+	@Test(dataProvider = "TestScenario1", dataProviderClass = DataProviderUtils.class,priority = 1)
 	public void TestCase2(HashMap<String, String> testData) {
 		loginPage.userLogin(testData)
 		.navigateToDelieryBookingPage()
